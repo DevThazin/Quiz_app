@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is Python?",
+        "2": "What is PEP 8?",
+        "3": "Which of the following is NOT a data type in Python?",
+        "4": "What is the syntax to declare a function in Python?",
+        "5": "Which keyword is used for defining a class in Python?",
+        "6": "What is the result of 2 + 3 * 4?",
+        "7": "What is the correct way to create a comment in Python?",
+        "8": "What is the output of the following code snippet?\n\nprint('Hello, World!'[3:])",
+        "9": "What is the purpose of 'len()' function in Python?",
+        "10": "Which of the following is used to iterate over a sequence in Python?"
+    },
+    {
+        "1": {
+            "a": "A programming language",
+            "b": "A type of snake",
+            "c": "A machine learning library",
+            "d": "An operating system"
+        },
+        "2": {
+            "a": "A style guide for Python code",
+            "b": "A built-in function",
+            "c": "A Python extension package",
+            "d": "A Python enhancement proposal"
+        },
+        "3": {
+            "a": "Int",
+            "b": "Float",
+            "c": "String",
+            "d": "List"
+        },
+        "4": {
+            "a": "def my_function():",
+            "b": "function my_function():",
+            "c": "void my_function():",
+            "d": "func my_function():"
+        },
+        "5": {
+            "a": "class",
+            "b": "def",
+            "c": "function",
+            "d": "void"
+        },
+        "6": {
+            "a": "20",
+            "b": "14",
+            "c": "15",
+            "d": "Error"
+        },
+        "7": {
+            "a": "// This is a comment",
+            "b": "# This is a comment",
+            "c": "/* This is a comment */",
+            "d": "<!-- This is a comment -->"
+        },
+        "8": {
+            "a": "World!",
+            "b": "Hello",
+            "c": "lo, World!",
+            "d": "llo, World!"
+        },
+        "9": {
+            "a": "Returns the number of elements in a list",
+            "b": "Returns the square root of a number",
+            "c": "Returns the length of a string",
+            "d": "Returns the absolute value of a number"
+        },
+        "10": {
+            "a": "for",
+            "b": "while",
+            "c": "do-while",
+            "d": "foreach"
+        }
+    },
+    {
+        "1": "a",
+        "2": "a",
+        "3": "d",
+        "4": "a",
+        "5": "a",
+        "6": "b",
+        "7": "b",
+        "8": "c",
+        "9": "a",
+        "10": "a"
+    }
+]

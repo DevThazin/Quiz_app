@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is the correct syntax for declaring a variable in Java?",
+        "2": "Which keyword is used to define a class in Java?",
+        "3": "What is the output of the following code snippet?\n\nSystem.out.println(10 + 20);",
+        "4": "Which data type is used to store whole numbers in Java?",
+        "5": "What is the purpose of the 'static' keyword in Java?",
+        "6": "What is the correct way to comment a single line in Java?",
+        "7": "Which operator is used for division in Java?",
+        "8": "What is the purpose of 'System.out.println()' in Java?",
+        "9": "Which keyword is used to define a method in Java?",
+        "10": "What is the output of the following code snippet?\n\nSystem.out.println(\"Hello, World!\");"
+    },
+    {
+        "1": {
+            "a": "int x;",
+            "b": "x int;",
+            "c": "declare x;",
+            "d": "variable x;"
+        },
+        "2": {
+            "a": "class",
+            "b": "interface",
+            "c": "object",
+            "d": "struct"
+        },
+        "3": {
+            "a": "30",
+            "b": "10 + 20",
+            "c": "Error",
+            "d": "Undefined"
+        },
+        "4": {
+            "a": "int",
+            "b": "float",
+            "c": "double",
+            "d": "char"
+        },
+        "5": {
+            "a": "To create a single copy of the variable that is shared among all instances of the class",
+            "b": "To make the variable accessible from any method in the class",
+            "c": "To prevent the variable from being modified",
+            "d": "To define a constant value"
+        },
+        "6": {
+            "a": "// This is a comment",
+            "b": "/* This is a comment */",
+            "c": "<!-- This is a comment -->",
+            "d": "# This is a comment"
+        },
+        "7": {
+            "a": "/",
+            "b": "%",
+            "c": "div",
+            "d": "divided"
+        },
+        "8": {
+            "a": "To print output to the console",
+            "b": "To read input from the console",
+            "c": "To display a message dialog",
+            "d": "To write output to a file"
+        },
+        "9": {
+            "a": "method",
+            "b": "function",
+            "c": "define",
+            "d": "void"
+        },
+        "10": {
+            "a": "Hello, World!",
+            "b": "Hello",
+            "c": "World!",
+            "d": "Error"
+        }
+    },
+    {
+        "1": "a",
+        "2": "a",
+        "3": "a",
+        "4": "a",
+        "5": "a",
+        "6": "a",
+        "7": "b",
+        "8": "a",
+        "9": "a",
+        "10": "a"
+    }
+]

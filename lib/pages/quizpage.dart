@@ -7,9 +7,10 @@ import 'package:flutter/services.dart';
 import 'package:login_page/pages/resultpage.dart';
 
 class GetJson extends StatefulWidget {
-  final String langname;
+  final String subject;
+  final String difficulty;
 
-  GetJson(this.langname);
+  GetJson(this.subject, this.difficulty);
 
   @override
   _GetJsonState createState() => _GetJsonState();
@@ -18,53 +19,35 @@ class GetJson extends StatefulWidget {
 class _GetJsonState extends State<GetJson> {
   late String assetToLoad;
 
-  // Set the asset to a particular JSON file based on the selected language
   void setAsset() {
-    switch (widget.langname) {
-      case "Python":
-        assetToLoad = "assets/python.json";
-        break;
-      case "Java":
-        assetToLoad = "assets/java.json";
-        break;
-      case "Javascript":
-        assetToLoad = "assets/js.json";
-        break;
-      case "C++":
-        assetToLoad = "assets/cpp.json";
-        break;
-      default:
-        assetToLoad = "assets/linux.json";
-    }
+    String difficultyPrefix = '';
+
+    // Generate the asset path based on subject and difficulty level
+    assetToLoad = "assets/${widget.subject}_${widget.difficulty}.json";
   }
 
   @override
   Widget build(BuildContext context) {
-    // Call setAsset to determine the correct asset to load
     setAsset();
 
-    // Use FutureBuilder to load and decode JSON data
     return FutureBuilder<String>(
       future: DefaultAssetBundle.of(context).loadString(assetToLoad),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          // Display loading indicator while waiting for data
           return Scaffold(
             body: Center(
               child: CircularProgressIndicator(),
             ),
           );
         } else if (snapshot.hasError || snapshot.data == null) {
-          // Handle error loading JSON or if data is null
           return Scaffold(
             body: Center(
-              child: Text("Error loading data"),
+              child: Text("Error loading data geksdjke "),
             ),
           );
         } else {
-          // Decode JSON data and pass it to QuizPage widget
           List myData = json.decode(snapshot.data!);
-          return QuizPage(myData: myData, key: UniqueKey());
+          return QuizPage(subject: widget.subject, difficulty: widget.difficulty, myData: myData, key: UniqueKey());
         }
       },
     );
@@ -72,13 +55,18 @@ class _GetJsonState extends State<GetJson> {
 }
 
 class QuizPage extends StatefulWidget {
+  final String subject;
+  final String difficulty;
   final List myData;
 
-  QuizPage({required Key key, required this.myData}) : super(key: key);
+  QuizPage({ required Key key,required this.myData, required this.subject, required this.difficulty}) : super(key: key);
 
   @override
   _QuizPageState createState() => _QuizPageState();
 }
+
+
+
 
 class _QuizPageState extends State<QuizPage> {
   Color right = Colors.green;
@@ -90,10 +78,10 @@ class _QuizPageState extends State<QuizPage> {
   var randomArray = [];
 
   Map<String, Color> btnColor = {
-    "a": Colors.indigoAccent,
-    "b": Colors.indigoAccent,
-    "c": Colors.indigoAccent,
-    "d": Colors.indigoAccent,
+    "a": Color(0xf49682de),
+    "b": Color(0xf49682de),
+    "c": Color(0xf49682de),
+    "d": Color(0xf49682de),
   };
 
   bool cancelTimer = false;
@@ -142,26 +130,30 @@ class _QuizPageState extends State<QuizPage> {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => ResultPage(marks: marks, key: UniqueKey()),
         ));
-
       }
       btnColor.forEach((key, value) {
-        btnColor[key] = Colors.indigoAccent;
+        btnColor[key] = Color(0xf49682de);
       });
     });
     startTimer();
   }
 
   void checkAnswer(String k) {
-    if (widget.myData[2][randomArray[currentQuestionIndex].toString()] ==
-        widget.myData[1][randomArray[currentQuestionIndex].toString()][k]) {
+    String correctAnswer = widget.myData[2][randomArray[currentQuestionIndex].toString()];
+    String selectedAnswerIndex = k;
+
+    if (selectedAnswerIndex == correctAnswer) {
       marks += 5;
       btnColor[k] = right;
     } else {
       btnColor[k] = wrong;
+      
     }
+
     setState(() {
       cancelTimer = true;
     });
+
     Timer(Duration(seconds: 2), nextQuestion);
   }
 
@@ -174,14 +166,14 @@ class _QuizPageState extends State<QuizPage> {
           widget.myData[1][randomArray[currentQuestionIndex].toString()][k],
           style: TextStyle(
             color: Colors.white,
-            fontFamily: "Alike",
+
             fontSize: 16.0,
           ),
           maxLines: 1,
         ),
         color: btnColor[k],
-        splashColor: Colors.indigo[700]!,
-        highlightColor: Colors.indigo[700]!,
+        splashColor: Color(0xf49682de),
+        highlightColor: Color(0xff78258B),
         minWidth: 200.0,
         height: 45.0,
         shape: RoundedRectangleBorder(
@@ -214,63 +206,127 @@ class _QuizPageState extends State<QuizPage> {
             ],
           ),
         );
-        // Always return false to prevent the user from going back
         return false;
       },
       child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            Expanded(
-              flex: 3,
-              child: Container(
-                padding: EdgeInsets.all(15.0),
-                alignment: Alignment.bottomLeft,
+        appBar: AppBar(
+          title: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(60),
+                child: Image.asset(
+                  'assets/images/robot.png',
+                  height: 50,
+                  width: 50,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(
+                width: 40.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0),
                 child: Text(
-                  widget.myData[0][randomArray[currentQuestionIndex].toString()],
+                  "It's Quiz Time",
                   style: TextStyle(
-                    fontSize: 16.0,
-                    fontFamily: "Quando",
+                    color: Colors.white,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
+              )
+            ],
+          ),
+          backgroundColor: Color(0xf49682de), // Set to transparent
+          elevation: 0, // Remove elevation
+        ),
+        body: Container(
+          height: double.maxFinite,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xf49682de), Color(0xffb33bbe)],
             ),
-            Expanded(
-              flex: 6,
-              child: AbsorbPointer(
-                absorbing: cancelTimer,
-                child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      choiceButton('a'),
-                      choiceButton('b'),
-                      choiceButton('c'),
-                      choiceButton('d'),
-                    ],
+          ),
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.all(10.0),
+                height: 280,
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  color: Color(0xff78258B),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
                   ),
                 ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 10),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      child: Center(
+                        child: Text(
+                          widget.myData[0][randomArray[currentQuestionIndex].toString()],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.0,
+                            fontFamily: "Quando",
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                alignment: Alignment.topCenter,
-                child: Center(
-                  child: Text(
-                    showTimer,
-                    style: TextStyle(
-                      fontSize: 35.0,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Times New Roman',
+              Expanded(
+                flex: 6,
+
+                child: AbsorbPointer(
+                  absorbing: cancelTimer,
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        choiceButton('a'),
+                        choiceButton('b'),
+                        choiceButton('c'),
+                        choiceButton('d'),
+                      ],
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+              Expanded(
+                flex: 1,
+
+                child: Container(
+                  alignment: Alignment.topCenter,
+                  child: Center(
+                    child: Text(
+                      showTimer,
+                      style: TextStyle(
+                        fontSize: 35.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Times New Roman',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
+
     );
   }
 }
-

@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is the output of the following code snippet?\n\nint x = 10;\nint y = 20;\nint z = (x > y) ? x : y;",
+        "2": "What does the 'static' keyword do when applied to a variable in C++?",
+        "3": "Which of the following correctly declares a 2D array in C++?",
+        "4": "What is the difference between 'class' and 'struct' in C++?",
+        "5": "What is the purpose of the 'virtual' keyword in C++?",
+        "6": "What does the 'const' keyword signify in a function declaration in C++?",
+        "7": "What is the output of the following code snippet?\n\nint arr[5];\nfor (int i = 0; i < 5; ++i) {\n  arr[i] = i;\n}\nint *ptr = arr + 2;\ncout << *ptr;",
+        "8": "What is the role of 'friend' keyword in C++?",
+        "9": "What is the output of the following code snippet?\n\nint x = 5;\nint *ptr = &x;\ncout << *ptr;",
+        "10": "What is the purpose of 'try', 'catch', and 'throw' keywords in C++?"
+    },
+    {
+        "1": {
+            "a": "20",
+            "b": "10",
+            "c": "30",
+            "d": "Compiler Error"
+        },
+        "2": {
+            "a": "Allocates memory dynamically",
+            "b": "Preserves the value of the variable across function calls",
+            "c": "Initializes the variable with a default value",
+            "d": "Binds the variable to the class instead of the instance"
+        },
+        "3": {
+            "a": "int arr[5][5];",
+            "b": "int arr[][];",
+            "c": "int arr[5, 5];",
+            "d": "int arr[][] = new int[5][5];"
+        },
+        "4": {
+            "a": "There is no difference",
+            "b": "'class' members are public by default, while 'struct' members are private by default",
+            "c": "'struct' members are public by default, while 'class' members are private by default",
+            "d": "'struct' members can have methods, while 'class' members cannot"
+        },
+        "5": {
+            "a": "Indicates that a function can be overridden in derived classes",
+            "b": "Specifies that a function has no implementation",
+            "c": "Defines a pure virtual function",
+            "d": "Enables dynamic binding"
+        },
+        "6": {
+            "a": "The function cannot modify any variables",
+            "b": "The function cannot be called with non-const arguments",
+            "c": "The function cannot return a value",
+            "d": "The function cannot throw exceptions"
+        },
+        "7": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
+        },
+        "8": {
+            "a": "Enables access to private members of a class by external functions",
+            "b": "Specifies a subclass",
+            "c": "Declares a global function",
+            "d": "Provides access to protected members of a class by other classes"
+        },
+        "9": {
+            "a": "5",
+            "b": "Compiler Error",
+            "c": "Segmentation Fault",
+            "d": "Undefined Behavior"
+        },
+        "10": {
+            "a": "Used for exception handling",
+            "b": "Defines a custom exception class",
+            "c": "Marks the beginning of a function",
+            "d": "Specifies a catch block"
+        }
+    },
+    {
+        "1": "c",
+        "2": "b",
+        "3": "a",
+        "4": "c",
+        "5": "a",
+        "6": "b",
+        "7": "d",
+        "8": "a",
+        "9": "a",
+        "10": "a"
+    }
+]

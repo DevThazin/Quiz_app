@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is inheritance in Java?",
+        "2": "What is the purpose of 'super' keyword in Java?",
+        "3": "What is method overloading in Java?",
+        "4": "What is the purpose of 'instanceof' operator in Java?",
+        "5": "What is a constructor in Java?",
+        "6": "What is the output of the following code snippet?\n\nint x = 5;\nSystem.out.println(x++);",
+        "7": "What is method overriding in Java?",
+        "8": "What is the purpose of 'final' keyword in Java?",
+        "9": "What is a static method in Java?",
+        "10": "What is the output of the following code snippet?\n\nString str = \"Hello\";\nstr.concat(\", World!\");\nSystem.out.println(str);"
+    },
+    {
+        "1": {
+            "a": "The process by which one class acquires the properties and behavior of another class",
+            "b": "The process of creating a new object from an existing object",
+            "c": "The process of defining multiple methods with the same name but different parameters",
+            "d": "The process of preventing inheritance in a class"
+        },
+        "2": {
+            "a": "To refer to the superclass of a subclass",
+            "b": "To refer to the subclass of a superclass",
+            "c": "To invoke the superclass constructor",
+            "d": "To access the superclass methods"
+        },
+        "3": {
+            "a": "The process of defining multiple methods with the same name but different parameters",
+            "b": "The process of defining multiple constructors with the same name but different parameters",
+            "c": "The process of defining multiple methods with the same name and same parameters",
+            "d": "The process of defining multiple constructors with the same name and same parameters"
+        },
+        "4": {
+            "a": "To check if an object is an instance of a specific class",
+            "b": "To convert an object to an instance of a specific class",
+            "c": "To check if an object is null",
+            "d": "To convert an object to null"
+        },
+        "5": {
+            "a": "A special method that is called when an object is instantiated",
+            "b": "A method that is called when an object is destroyed",
+            "c": "A method that is called to initialize the object's state",
+            "d": "A method that is called to finalize the object's state"
+        },
+        "6": {
+            "a": "5",
+            "b": "6",
+            "c": "4",
+            "d": "Error"
+        },
+        "7": {
+            "a": "The process of redefining a superclass method in a subclass",
+            "b": "The process of calling a superclass method from a subclass",
+            "c": "The process of defining multiple methods with the same name but different parameters",
+            "d": "The process of defining multiple constructors with the same name but different parameters"
+        },
+        "8": {
+            "a": "To prevent a class from being subclassed",
+            "b": "To prevent a method from being overridden",
+            "c": "To prevent a variable from being modified",
+            "d": "To prevent a method from being accessed"
+        },
+        "9": {
+            "a": "A method that belongs to the class rather than any object of the class",
+            "b": "A method that belongs to an object rather than the class",
+            "c": "A method that can be accessed without creating an object of the class",
+            "d": "A method that can only be accessed by other methods in the class"
+        },
+        "10": {
+            "a": "Hello, World!",
+            "b": "Hello",
+            "c": "Hello, World!",
+            "d": "Error"
+        }
+    },
+    {
+        "1": "a",
+        "2": "a",
+        "3": "a",
+        "4": "a",
+        "5": "a",
+        "6": "a",
+        "7": "a",
+        "8": "a",
+        "9": "a",
+        "10": "d"
+    }
+]

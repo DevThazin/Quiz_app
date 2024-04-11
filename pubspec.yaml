@@ -70,8 +70,11 @@ flutter:
     - assets/images/image_1.png
     - assets/images/robot_welcome.png
     - assets/images/robot.png
+    - assets/images/img.png
     - assets/images/robot2.png
     - assets/images/bad.png
+    - assets/images/good.png
+    - assets/images/success.png
     - assets/images/cpp.png
     - assets/images/java.png
     - assets/images/linux.png
@@ -80,10 +83,18 @@ flutter:
     - assets/images/success.png
     - assets/icons/deisgn.svg
     - assets/images/logo.png
-    - assets/cpp.json
-    - assets/java.json
-    - assets/linux.json
-    - assets/python.json
+    - assets/cpp_easy.json
+    - assets/cpp_medium.json
+    - assets/cpp_hard.json
+    - assets/java_easy.json
+    - assets/java_medium.json
+    - assets/java_hard.json
+    - assets/javascript_easy.json
+    - assets/javascript_medium.json
+    - assets/javascript_hard.json
+    - assets/python_easy.json
+    - assets/python_medium.json
+    - assets/python_hard.json
 
 
 

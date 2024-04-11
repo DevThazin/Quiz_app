@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What does 'typeof' operator return in JavaScript?",
+        "2": "Which keyword is used to declare variables in JavaScript?",
+        "3": "What is the output of the following code snippet?\n\nconsole.log(5 + '5');",
+        "4": "Which function is used to print output in JavaScript?",
+        "5": "What is the purpose of 'NaN' in JavaScript?",
+        "6": "What is the correct way to comment a single line in JavaScript?",
+        "7": "Which built-in method reverses the order of the elements of an array?",
+        "8": "What is the purpose of the 'parseInt()' function in JavaScript?",
+        "9": "Which symbol is used for single-line comments in JavaScript?",
+        "10": "What is the output of the following code snippet?\n\nconsole.log(true + false);"
+    },
+    {
+        "1": {
+            "a": "String",
+            "b": "Number",
+            "c": "Undefined",
+            "d": "Object"
+        },
+        "2": {
+            "a": "var",
+            "b": "let",
+            "c": "const",
+            "d": "int"
+        },
+        "3": {
+            "a": "10",
+            "b": "55",
+            "c": "5",
+            "d": "Error"
+        },
+        "4": {
+            "a": "console.print()",
+            "b": "print()",
+            "c": "log()",
+            "d": "write()"
+        },
+        "5": {
+            "a": "Not a Number",
+            "b": "A special value representing an invalid number",
+            "c": "A function for numeric operations",
+            "d": "A type of data structure"
+        },
+        "6": {
+            "a": "// This is a comment",
+            "b": "/* This is a comment */",
+            "c": "<!-- This is a comment -->",
+            "d": "# This is a comment"
+        },
+        "7": {
+            "a": "reverse()",
+            "b": "sort()",
+            "c": "changeOrder()",
+            "d": "reverseArray()"
+        },
+        "8": {
+            "a": "To parse a string and return an integer",
+            "b": "To convert a string to uppercase",
+            "c": "To concatenate two strings",
+            "d": "To remove leading and trailing whitespace"
+        },
+        "9": {
+            "a": "//",
+            "b": "/*",
+            "c": "#",
+            "d": "--"
+        },
+        "10": {
+            "a": "1",
+            "b": "false",
+            "c": "true",
+            "d": "Error"
+        }
+    },
+    {
+        "1": "b",
+        "2": "a",
+        "3": "b",
+        "4": "c",
+        "5": "b",
+        "6": "a",
+        "7": "a",
+        "8": "a",
+        "9": "a",
+        "10": "c"
+    }
+]

@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is polymorphism in Java?",
+        "2": "What is the purpose of 'this' keyword in Java?",
+        "3": "What is method chaining in Java?",
+        "4": "What is the 'transient' keyword used for in Java?",
+        "5": "What is exception handling in Java?",
+        "6": "What is the purpose of 'synchronized' keyword in Java?",
+        "7": "What is the difference between '== and '.equals()' in Java?",
+        "8": "What is the 'volatile' keyword used for in Java?",
+        "9": "What is reflection in Java?",
+        "10": "What is the 'assert' keyword used for in Java?"
+    },
+    {
+        "1": {
+            "a": "The ability of a method to perform different actions based on the object that it is acting upon",
+            "b": "The ability of a variable to store different types of data",
+            "c": "The ability of a class to have multiple constructors",
+            "d": "The ability of a class to inherit from multiple superclasses"
+        },
+        "2": {
+            "a": "To refer to the current instance of the class",
+            "b": "To refer to the superclass of the class",
+            "c": "To refer to the subclass of the class",
+            "d": "To refer to a static method of the class"
+        },
+        "3": {
+            "a": "Invoking multiple methods on the same object in a single line",
+            "b": "Invoking a method on an object that returns another object",
+            "c": "Invoking a method on an object that modifies its state",
+            "d": "Invoking a method on an object that throws an exception"
+        },
+        "4": {
+            "a": "To prevent a variable from being serialized",
+            "b": "To prevent a variable from being accessed",
+            "c": "To prevent a variable from being modified",
+            "d": "To prevent a variable from being garbage collected"
+        },
+        "5": {
+            "a": "The process of handling errors and exceptions in a program",
+            "b": "The process of propagating errors and exceptions in a program",
+            "c": "The process of ignoring errors and exceptions in a program",
+            "d": "The process of logging errors and exceptions in a program"
+        },
+        "6": {
+            "a": "To ensure that only one thread can access a block of code at a time",
+            "b": "To synchronize the execution of multiple threads",
+            "c": "To ensure that threads are executed in a specific order",
+            "d": "To synchronize the access to a shared resource"
+        },
+        "7": {
+            "a": "'==' compares the references of two objects, while '.equals()' compares their values",
+            "b": "'==' compares the values of two objects, while '.equals()' compares their references",
+            "c": "'==' is used for primitive data types, while '.equals()' is used for objects",
+            "d": "'==' is used for objects, while '.equals()' is used for primitive data types"
+        },
+        "8": {
+            "a": "To indicate that a variable's value will be modified by multiple threads",
+            "b": "To indicate that a variable's value will be accessed by multiple threads",
+            "c": "To indicate that a variable's value will be stored in a thread-safe manner",
+            "d": "To indicate that a variable's value will not be cached"
+        },
+        "9": {
+            "a": "The ability of a program to inspect and modify its own structure and behavior at runtime",
+            "b": "The ability of a program to execute code from another program",
+            "c": "The ability of a program to recover from runtime errors",
+            "d": "The ability of a program to generate code dynamically"
+        },
+        "10": {
+            "a": "To specify an assertion in the code that must be true for the program to continue executing",
+            "b": "To specify an exception that must be caught by the program",
+            "c": "To specify a condition that must be checked by the program",
+            "d": "To specify a test case that must pass for the program to continue executing"
+        }
+    },
+    {
+        "1": "a",
+        "2": "a",
+        "3": "a",
+        "4": "a",
+        "5": "a",
+        "6": "a",
+        "7": "a",
+        "8": "a",
+        "9": "a",
+        "10": "a"
+    }
+]

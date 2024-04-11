@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is a closure in JavaScript?",
+        "2": "What is the purpose of 'this' keyword in JavaScript?",
+        "3": "What is the difference between '==' and '===' operators in JavaScript?",
+        "4": "What is the output of the following code snippet?\n\nconsole.log(typeof [] === 'object');",
+        "5": "What is the purpose of 'use strict' in JavaScript?",
+        "6": "What is a callback function in JavaScript?",
+        "7": "What is the output of the following code snippet?\n\nconsole.log(0.1 + 0.2);",
+        "8": "What is the difference between 'let' and 'var' in JavaScript?",
+        "9": "What is a promise in JavaScript?",
+        "10": "What is the purpose of 'async' and 'await' in JavaScript?"
+    },
+    {
+        "1": {
+            "a": "A function inside another function that has access to its outer function's scope",
+            "b": "A function that is defined using the 'function' keyword",
+            "c": "A function that returns another function",
+            "d": "A function that accepts an array as an argument"
+        },
+        "2": {
+            "a": "To refer to the current object",
+            "b": "To create a new object",
+            "c": "To access the parent object",
+            "d": "To define a function"
+        },
+        "3": {
+            "a": "'==' compares values only, while '===' compares both values and types",
+            "b": "'===' compares values only, while '==' compares both values and types",
+            "c": "'==' is used for assignment, while '===' is used for comparison",
+            "d": "'===' is used for assignment, while '==' is used for comparison"
+        },
+        "4": {
+            "a": "true",
+            "b": "false",
+            "c": "Error",
+            "d": "Undefined"
+        },
+        "5": {
+            "a": "To enforce stricter parsing and error handling",
+            "b": "To enable a higher level of security",
+            "c": "To enable certain JavaScript features",
+            "d": "To define global variables"
+        },
+        "6": {
+            "a": "A function that is passed as an argument to another function",
+            "b": "A function that calls itself recursively",
+            "c": "A function that returns a function",
+            "d": "A function that is defined using the 'callback' keyword"
+        },
+        "7": {
+            "a": "0.1",
+            "b": "0.2",
+            "c": "0.30000000000000004",
+            "d": "Error"
+        },
+        "8": {
+            "a": "'let' has block scope, while 'var' has function scope",
+            "b": "'let' is used for global variables, while 'var' is used for local variables",
+            "c": "'let' is used for constants, while 'var' is used for variables",
+            "d": "'let' is a keyword in ES5, while 'var' is a keyword in ES6"
+        },
+        "9": {
+            "a": "An object representing the eventual completion or failure of an asynchronous operation",
+            "b": "A built-in JavaScript function",
+            "c": "A type of data structure",
+            "d": "A method for handling errors"
+        },
+        "10": {
+            "a": "To handle asynchronous code more cleanly and synchronously",
+            "b": "To improve the performance of asynchronous operations",
+            "c": "To enable asynchronous code to be executed sequentially",
+            "d": "To define asynchronous functions"
+        }
+    },
+    {
+        "1": "a",
+        "2": "a",
+        "3": "a",
+        "4": "a",
+        "5": "a",
+        "6": "a",
+        "7": "c",
+        "8": "a",
+        "9": "a",
+        "10": "a"
+    }
+]

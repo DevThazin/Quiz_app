@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 
@@ -39,78 +40,127 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Result"),
+        title: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(60),
+              child: Image.asset(
+                'assets/images/robot.png',
+                height: 50,
+                width: 50,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(
+              width: 40.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Text(
+                "Your result",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
+          ],
+        ),
+        backgroundColor: Color(0xf49682de), // Set to transparent
       ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            flex: 8,
-            child: Material(
-              elevation: 10.0,
-              child: Container(
-                child: Column(
-                  children: <Widget>[
-                    Material(
-                      child: Container(
-                        width: 300.0,
-                        height: 300.0,
-                        child: ClipRect(
-                          child: Image(
-                            image: AssetImage(image),
+      body: Container(
+        height: double.maxFinite,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xffb4cdfa), Color(0xf49682de)],
+          ),
+        ),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 8,
+              child: Material(
+                color: Color(0xf49682de), // Set Material's color to transparent
+                elevation: 10.0,
+                child: Container(
+                  // Set Container's color to transparent
+                  child: Column(
+                    children: <Widget>[
+                      Material(
+                        child: Container(
+                          color: Color(0xf49682de),
+                          width: 350.0,
+                          height: 350.0,
+                          child: ClipRect(
+                            child: Image(
+                              image: AssetImage(image),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 15.0,
-                      ),
-                      child: Center(
-                        child: Text(
-                          message,
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            fontFamily: "Quando",
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 15.0,
+                          horizontal: 15.0,
+                        ),
+                        child: Center(
+                          child: Text(
+                            message,
+                            style: TextStyle(
+                              fontSize: 25.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Quando",
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 4,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => homepage(), // Adjust the widget name accordingly
-                    ));
-                  },
-                  child: Text(
-                    "Continue",
-                    style: TextStyle(
-                      fontSize: 18.0,
+            Expanded(
+              flex: 4,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) =>
+                            Homepage(), // Adjust the widget name accordingly
+                      ));
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 60,
+                      width: 200,
+                      decoration: BoxDecoration(
+                        color: Color(0xff78258B),
+                        borderRadius: BorderRadius.circular(37),
+                      ),
+                      child: const Text(
+                        "Continue",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+
                     ),
                   ),
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 10.0,
-                      horizontal: 25.0,
-                    ),
-                    side: BorderSide(width: 3.0, color: Colors.indigo),
-                    splashFactory: InkRipple.splashFactory,
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
+
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

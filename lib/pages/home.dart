@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:login_page/pages/quizpage.dart';
 
-class homepage extends StatefulWidget {
+class Homepage extends StatefulWidget {
   @override
-  _homepageState createState() => _homepageState();
+  _HomepageState createState() => _HomepageState();
 }
 
-class _homepageState extends State<homepage> {
+class _HomepageState extends State<Homepage> {
 
   List<String> images = [
     "assets/images/py.png",
@@ -17,89 +17,89 @@ class _homepageState extends State<homepage> {
     "assets/images/linux.png",
   ];
 
-  List<String> des = [
-    "Python is one of the most popular and fastest programming language since half a decade.\nIf You think you have learnt it.. \nJust test yourself !!",
-    "Java has always been one of the best choices for Enterprise World. If you think you have learn the Language...\nJust Test Yourself !!",
-    "Javascript is one of the most Popular programming language supporting the Web.\nIt has a wide range of Libraries making it Very Powerful !",
-    "C++, being a statically typed programming language is very powerful and Fast.\nit's DMA feature makes it more useful. !",
-    "Linux is a OPEN SOURCE Operating System which powers many Servers and Workstation.\nIt is also a top Priority in Developement Work !",
+  List<String> subjects = [
+    "cpp",
+    "java",
+    "linux",
+    "python",
   ];
 
-  Widget customcard(String langname, String image, String des){
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 30.0,
-      ),
-      child: InkWell(
-        onTap: (){
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-            // in changelog 1 we will pass the langname name to ther other widget class
-            // this name will be used to open a particular JSON file
-            // for a particular language
-            builder: (context) => GetJson(langname),
-          ));
-        },
-        child: Material(
-          color: Colors.indigoAccent,
-          elevation: 10.0,
-          borderRadius: BorderRadius.circular(25.0),
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 10.0,
-                  ),
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(100.0),
-                    child: Container(
-                      // changing from 200 to 150 as to look better
-                      height: 150.0,
-                      width: 150.0,
-                      child: ClipOval(
-                        child: Image(
-                          fit: BoxFit.cover,
-                          image: AssetImage(
-                            image,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+  Widget customCard(String subject, String image) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      child: Card(
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: InkWell(
+          onTap: () {
+            _showDifficultyDialog(context, subject);
+          },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(15.0),
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage(image),
                 ),
-                Center(
-                  child: Text(
-                    langname,
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                      fontFamily: "Quando",
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+              ),
+              Text(
+                subject,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
-                Container(
-                  padding: EdgeInsets.all(20.0),
-                  child: Text(
-                    des,
-                    style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.white,
-                        fontFamily: "Alike"
-                    ),
-                    maxLines: 5,
-                    textAlign: TextAlign.justify,
-                  ),
-
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
+  }
+
+  void _showDifficultyDialog(BuildContext context, String subject) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Select Difficulty'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop('easy');
+                },
+                child: Text('Easy'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop('medium');
+                },
+                child: Text('Medium'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop('hard');
+                },
+                child: Text('Hard'),
+              ),
+            ],
+          ),
+        );
+      },
+    ).then((difficulty) {
+      if (difficulty != null) {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => GetJson(subject, difficulty),
+        ));
+      }
+    });
   }
 
   @override
@@ -108,22 +108,76 @@ class _homepageState extends State<homepage> {
       DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
     ]);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Quizstar",
-          style: TextStyle(
-            fontFamily: "Quando",
+      body: Container(
+        height: double.maxFinite,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xffb4cdfa), Color(0xf49682de)],
           ),
         ),
-      ),
-      body: ListView(
-        children: <Widget>[
-          customcard("Python", images[0], des[0]),
-          customcard("Java", images[1], des[1]),
-          customcard("Javascript", images[2], des[2]),
-          customcard("C++", images[3], des[3]),
-          customcard("Linux", images[4], des[4]),
-        ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Stack(
+                children: [
+                  Container(
+                    height: 220,
+                    padding: EdgeInsets.only(left: 20.0, top: 50.0),
+                    decoration: BoxDecoration(
+                      color: Color(0xff78258B),
+                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(60),
+                            child: Image.asset('assets/images/robot.png', height: 50, width: 50, fit: BoxFit.cover,)),
+                        SizedBox(
+                          width: 40.0,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(color: Color(0xff78258B)),
+                    margin: EdgeInsets.only(top: 120.0, left: 20.0, right: 20.0),
+                    child: Row(
+                      children: [
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                            child: Image.asset("assets/images/img.png", width: 350,))
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 30.0,),
+              Text("Top Quiz Categories", style: TextStyle(color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold),),
+              SizedBox(height: 30.0,),
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 2,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
+                padding: EdgeInsets.all(20),
+                children: [
+                  customCard("cpp", images[3]),
+                  customCard("java", images[1]),
+                  customCard("javaScript", images[2]),
+                  customCard("python", images[0]),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

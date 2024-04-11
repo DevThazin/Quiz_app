@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is a generator in Python?",
+        "2": "What is the difference between 'yield' and 'return' in Python?",
+        "3": "What is a decorator in Python?",
+        "4": "What is a lambda function in Python?",
+        "5": "What is the purpose of the 'global' keyword in Python?",
+        "6": "What is the output of the following code snippet?\n\na = [1, 2, 3]\nb = a\na.append(4)\nprint(b)",
+        "7": "What is the purpose of '__init__' method in Python classes?",
+        "8": "What is a closure in Python?",
+        "9": "What is the output of the following code snippet?\n\nx = 10\ndef foo():\n    x += 5\n    print(x)\nfoo()",
+        "10": "What is the purpose of 'pass' statement in Python?"
+    },
+    {
+        "1": {
+            "a": "A function that returns a generator object",
+            "b": "A type of data structure",
+            "c": "A special type of function that can yield multiple values lazily",
+            "d": "An iterator"
+        },
+        "2": {
+            "a": "'yield' returns a value and suspends the function's execution, while 'return' terminates the function",
+            "b": "'yield' terminates the function, while 'return' suspends the function's execution",
+            "c": "'yield' is used in generator functions, while 'return' is used in regular functions",
+            "d": "'yield' and 'return' are interchangeable"
+        },
+        "3": {
+            "a": "A way to add new attributes to an object",
+            "b": "A way to modify existing attributes of an object",
+            "c": "A function that takes another function as an argument and extends its behavior without modifying it",
+            "d": "A built-in Python module"
+        },
+        "4": {
+            "a": "A small anonymous function",
+            "b": "A function that takes another function as an argument",
+            "c": "A function with variable number of arguments",
+            "d": "A function that returns a generator object"
+        },
+        "5": {
+            "a": "To access a global variable inside a function",
+            "b": "To declare a variable as global",
+            "c": "To import a global module",
+            "d": "To override a global variable"
+        },
+        "6": {
+            "a": "[1, 2, 3]",
+            "b": "[1, 2, 3, 4]",
+            "c": "[1, 2, 3, 4, 4]",
+            "d": "Error"
+        },
+        "7": {
+            "a": "To initialize an object's attributes",
+            "b": "To define a class method",
+            "c": "To override a method in a subclass",
+            "d": "To delete an object"
+        },
+        "8": {
+            "a": "A function that remembers the environment in which it was created",
+            "b": "A way to access global variables",
+            "c": "A type of iterator",
+            "d": "A way to define static methods"
+        },
+        "9": {
+            "a": "15",
+            "b": "10",
+            "c": "Error",
+            "d": "20"
+        },
+        "10": {
+            "a": "To do nothing and avoid syntax errors",
+            "b": "To terminate the execution of a loop or function",
+            "c": "To define a placeholder function",
+            "d": "To skip a condition and continue execution"
+        }
+    },
+    {
+        "1": "c",
+        "2": "a",
+        "3": "c",
+        "4": "a",
+        "5": "b",
+        "6": "b",
+        "7": "a",
+        "8": "a",
+        "9": "c",
+        "10": "a"
+    }
+]

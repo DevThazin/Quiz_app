@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is event delegation in JavaScript?",
+        "2": "What is the purpose of 'bind()' method in JavaScript?",
+        "3": "What is memoization in JavaScript?",
+        "4": "What is a pure function in JavaScript?",
+        "5": "What is the output of the following code snippet?\n\nconsole.log(Math.max());",
+        "6": "What is a closure in JavaScript?",
+        "7": "What is the output of the following code snippet?\n\nconsole.log('1' == 1);\nconsole.log('1' === 1);",
+        "8": "What is a higher-order function in JavaScript?",
+        "9": "What is the output of the following code snippet?\n\nconsole.log([10, 20, 30].map(parseInt));",
+        "10": "What is the purpose of 'currying' in JavaScript?"
+    },
+    {
+        "1": {
+            "a": "A technique for handling events at a higher level in the DOM hierarchy",
+            "b": "A method for creating new events in JavaScript",
+            "c": "A way to delegate tasks to child functions",
+            "d": "An approach to asynchronous programming"
+        },
+        "2": {
+            "a": "To bind the value of 'this' inside a function",
+            "b": "To bind the value of a variable to a function",
+            "c": "To bind the value of 'this' to a specific object",
+            "d": "To bind the value of a function to a specific object"
+        },
+        "3": {
+            "a": "A technique for improving the performance of recursive functions",
+            "b": "A way to store the results of expensive function calls and reuse them",
+            "c": "A method for managing memory allocation in JavaScript",
+            "d": "A way to optimize code execution by removing redundant calculations"
+        },
+        "4": {
+            "a": "A function that returns the same output for the same input and has no side effects",
+            "b": "A function that modifies its input parameters",
+            "c": "A function that relies on external state",
+            "d": "A function that generates random output"
+        },
+        "5": {
+            "a": "undefined",
+            "b": "0",
+            "c": "NaN",
+            "d": "Error"
+        },
+        "6": {
+            "a": "A function inside another function that has access to its outer function's scope",
+            "b": "A function that returns another function",
+            "c": "A function that accepts an array as an argument",
+            "d": "A function that calls itself recursively"
+        },
+        "7": {
+            "a": "true\nfalse",
+            "b": "true\ntrue",
+            "c": "false\nfalse",
+            "d": "false\ntrue"
+        },
+        "8": {
+            "a": "A function that takes another function as an argument or returns a function",
+            "b": "A function that operates on arrays and objects",
+            "c": "A function that executes only once",
+            "d": "A function that returns a boolean value"
+        },
+        "9": {
+            "a": "[10, NaN, NaN]",
+            "b": "[10, 20, 30]",
+            "c": "[NaN, NaN, NaN]",
+            "d": "[1, 2, 3]"
+        },
+        "10": {
+            "a": "To convert a function that takes multiple arguments into a sequence of functions that each take a single argument",
+            "b": "To convert a function that takes a single argument into a sequence of functions that each take multiple arguments",
+            "c": "To convert a function into a method",
+            "d": "To convert a method into a function"
+        }
+    },
+    {
+        "1": "a",
+        "2": "a",
+        "3": "b",
+        "4": "a",
+        "5": "c",
+        "6": "a",
+        "7": "c",
+        "8": "a",
+        "9": "a",
+        "10": "a"
+    }
+]

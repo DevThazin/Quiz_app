@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What does the 'cout' object do in C++?",
+        "2": "Which of the following is not a valid C++ data type?",
+        "3": "What is the output of the following code snippet?\n\nint x = 5;\nint y = 3;\nint z = x % y;",
+        "4": "What is the purpose of 'using namespace std;' in C++?",
+        "5": "Which of the following is used to declare a constant in C++?",
+        "6": "What is the correct syntax for declaring a pointer in C++?",
+        "7": "Which C++ operator is used to allocate memory for a variable?",
+        "8": "What is the difference between '++i' and 'i++' in C++?",
+        "9": "What is the function of the 'new' operator in C++?",
+        "10": "What is the return type of the 'main' function in C++?"
+    },
+    {
+        "1": {
+            "a": "Prints output to the console",
+            "b": "Reads input from the console",
+            "c": "Allocates memory dynamically",
+            "d": "Performs bitwise operations"
+        },
+        "2": {
+            "a": "Float",
+            "b": "Boolean",
+            "c": "String",
+            "d": "Char"
+        },
+        "3": {
+            "a": "2",
+            "b": "3",
+            "c": "1",
+            "d": "0"
+        },
+        "4": {
+            "a": "Declares a new namespace",
+            "b": "Specifies the standard input/output stream",
+            "c": "Defines a class",
+            "d": "Declares a constant"
+        },
+        "5": {
+            "a": "const",
+            "b": "var",
+            "c": "let",
+            "d": "static"
+        },
+        "6": {
+            "a": "int* ptr;",
+            "b": "ptr int;",
+            "c": "pointer ptr;",
+            "d": "int ptr();"
+        },
+        "7": {
+            "a": "*",
+            "b": "&",
+            "c": "=",
+            "d": "new"
+        },
+        "8": {
+            "a": "Both increment the value of 'i'",
+            "b": "The value of 'i' is incremented before use in '++i'",
+            "c": "The value of 'i' is incremented after use in 'i++'",
+            "d": "They are identical"
+        },
+        "9": {
+            "a": "Allocates memory for an array",
+            "b": "Allocates memory for a new object",
+            "c": "Frees allocated memory",
+            "d": "Returns the size of memory in bytes"
+        },
+        "10": {
+            "a": "int",
+            "b": "void",
+            "c": "string",
+            "d": "char"
+        }
+    },
+    {
+        "1": "a",
+        "2": "b",
+        "3": "c",
+        "4": "b",
+        "5": "a",
+        "6": "a",
+        "7": "d",
+        "8": "b",
+        "9": "b",
+        "10": "a"
+    }
+]

@@ -1,0 +1,88 @@
+[
+    {
+        "1": "What is the result of the following code snippet?\n\nx = [1, 2, 3, 4, 5]\ny = x[1:3]\nprint(y)",
+        "2": "What is the purpose of the 'zip()' function in Python?",
+        "3": "What does the 'map()' function do in Python?",
+        "4": "What is the output of the following code snippet?\n\nprint(list(range(5)))",
+        "5": "What is the difference between 'extend()' and 'append()' methods in Python lists?",
+        "6": "What is the purpose of the 'filter()' function in Python?",
+        "7": "What is the output of the following code snippet?\n\nx = [1, 2, 3]\nprint(x * 2)",
+        "8": "What is a list comprehension in Python?",
+        "9": "What is the output of the following code snippet?\n\nx = [1, 2, 3]\ny = [4, 5, 6]\nprint(list(zip(x, y)))",
+        "10": "What is the purpose of the 'reduce()' function in Python?"
+    },
+    {
+        "1": {
+            "a": "[2, 3]",
+            "b": "[1, 3]",
+            "c": "[2, 3, 4]",
+            "d": "[1, 2, 3]"
+        },
+        "2": {
+            "a": "To concatenate two lists",
+            "b": "To create a dictionary from two lists",
+            "c": "To iterate over multiple sequences simultaneously",
+            "d": "To sort a list in reverse order"
+        },
+        "3": {
+            "a": "Applies a function to each element of an iterable",
+            "b": "Filters elements from an iterable based on a condition",
+            "c": "Combines elements from multiple iterables into tuples",
+            "d": "Reduces a sequence to a single value"
+        },
+        "4": {
+            "a": "[0, 1, 2, 3, 4]",
+            "b": "[1, 2, 3, 4, 5]",
+            "c": "[0, 1, 2, 3]",
+            "d": "[0, 1, 2, 3, 4, 5]"
+        },
+        "5": {
+            "a": "'extend()' adds elements of another list to the original list, while 'append()' adds the entire list as a single element",
+            "b": "'extend()' appends an element to the end of the list, while 'append()' adds multiple elements to the end of the list",
+            "c": "'extend()' extends the length of the list, while 'append()' adds elements to the beginning of the list",
+            "d": "'extend()' and 'append()' are interchangeable"
+        },
+        "6": {
+            "a": "Applies a function to each element of an iterable",
+            "b": "Filters elements from an iterable based on a condition",
+            "c": "Combines elements from multiple iterables into tuples",
+            "d": "Reduces a sequence to a single value"
+        },
+        "7": {
+            "a": "[1, 2, 3, 1, 2, 3]",
+            "b": "[1, 2, 3, 4, 5, 6]",
+            "c": "[2, 4, 6]",
+            "d": "[2, 2, 3, 3, 2, 3]"
+        },
+        "8": {
+            "a": "A concise way to create lists using a single line of code",
+            "b": "A method to remove elements from a list based on a condition",
+            "c": "A function to check if a value exists in a list",
+            "d": "A way to access elements of a list using their indices"
+        },
+        "9": {
+            "a": "[(1, 4), (2, 5), (3, 6)]",
+            "b": "[(4, 1), (5, 2), (6, 3)]",
+            "c": "[(1, 2, 3), (4, 5, 6)]",
+            "d": "[(1, 4), (2, 5), (3, 6), (0, 0)]"
+        },
+        "10": {
+            "a": "To apply a function of two arguments cumulatively to the items of a sequence",
+            "b": "To check if a value exists in a sequence",
+            "c": "To combine elements from multiple sequences into tuples",
+            "d": "To filter elements from a sequence based on a condition"
+        }
+    },
+    {
+        "1": "a",
+        "2": "c",
+        "3": "a",
+        "4": "a",
+        "5": "a",
+        "6": "b",
+        "7": "b",
+        "8": "a",
+        "9": "a",
+        "10": "a"
+    }
+]
